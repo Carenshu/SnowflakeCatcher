@@ -2,6 +2,8 @@ Snowflake[] snow;
 void setup()
 {
   //your code here
+  background(131,132,135);
+  //background(255,0,0);
   size (500,500);
 
   snow =new Snowflake[100];
@@ -14,7 +16,7 @@ void setup()
 void draw()
 {
   //your code here
-  background(131,132,135);
+   //background(131,132,135);
   for (int i =0; i<snow.length; i++)
   {
   snow[i].erase();
@@ -27,7 +29,8 @@ void draw()
 void mouseDragged()
 {
   //your code here
-  
+  fill(245,245,255);
+  ellipse(mouseX, mouseY, 25, 25);
 }
 
 class Snowflake
@@ -54,7 +57,7 @@ class Snowflake
   void lookDown()
   {
     //your code here
-    if (y<500&&y>0&& get(x-1,y-1)!=color(0))
+    if (y<500&&y>0&& get(x-1,y-1)!=color(131,132,135))
     {
       isMoving= false;
     } else 
@@ -62,10 +65,12 @@ class Snowflake
        isMoving=true;  
     }
   }
+
   void erase()
   {
     //your code here
-    fill(0);
+  // fill(0);
+   fill(131,132,135);
     ellipse(x, y, 7, 7);
   }
   void move()
@@ -86,6 +91,7 @@ class Snowflake
     }
   }
 }
+
 
 
 
