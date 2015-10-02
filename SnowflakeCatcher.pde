@@ -3,7 +3,7 @@ void setup()
 {
   //your code here
   background(131,132,135);
-  //background(255,0,0);
+  
   size (500,500);
 
   snow =new Snowflake[100];
@@ -29,8 +29,16 @@ void draw()
 void mouseDragged()
 {
   //your code here
-  fill(245,245,255);
+if (mouseX>250)
+{
+  fill(235,241,255);
   ellipse(mouseX, mouseY, 25, 25);
+}else  {
+ fill(165,210,204);
+  ellipse(mouseX, mouseY, 25, 25);
+  
+}
+ 
 }
 
 class Snowflake
@@ -91,6 +99,8 @@ class Snowflake
     }
   }
 }
+
+
 
 
 
